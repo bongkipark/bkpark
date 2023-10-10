@@ -1,0 +1,3 @@
+C:\Users\bkpark\source\repos\Calculator2\Calculator2\x64\Release\Calculator2.MyForm.resources
+C:\Users\bkpark\source\repos\Calculator2\Calculator2\x64\Release\Calculator2.vcxproj.GenerateResource.cache
+C:\Users\bkpark\source\repos\Calculator2\Calculator2\x64\Release\Calculator2.vcxproj.AssemblyReference.cache
