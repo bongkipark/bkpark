@@ -1,0 +1,2 @@
+C:\Users\bkpark\source\repos\Calculator\Calculator\x64\Release\Calculator.MyForm.resources
+C:\Users\bkpark\source\repos\Calculator\Calculator\x64\Release\Calculator.vcxproj.GenerateResource.cache

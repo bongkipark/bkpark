@@ -1,0 +1,2 @@
+﻿  MyForm.cpp
+C:\Users\bkpark\source\repos\Calculator\Calculator\MyForm.cpp(6,21): error C2337: 'STATThreadAttribute': 특성을 찾을 수 없습니다.
