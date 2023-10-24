@@ -62,4 +62,5 @@ public:
 	afx_msg void OnBnClickedButton15();
 	afx_msg void OnStnClickedStaticView();
 	afx_msg void OnBnClickedButton16();
+	afx_msg void OnStnClickedStaticView2();
 };

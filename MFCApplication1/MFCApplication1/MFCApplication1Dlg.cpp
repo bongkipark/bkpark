@@ -1,4 +1,3 @@
-
 // MFCApplication1Dlg.cpp : implementation file
 //
 
@@ -82,6 +81,7 @@ BEGIN_MESSAGE_MAP(CMFCApplication1Dlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON15, &CMFCApplication1Dlg::OnBnClickedButton15)
 	ON_STN_CLICKED(IDC_STATIC_View, &CMFCApplication1Dlg::OnStnClickedStaticView)
 	ON_BN_CLICKED(IDC_BUTTON16, &CMFCApplication1Dlg::OnBnClickedButton16)
+	ON_STN_CLICKED(IDC_STATIC_View2, &CMFCApplication1Dlg::OnStnClickedStaticView2)
 END_MESSAGE_MAP()
 
 
@@ -212,6 +212,7 @@ void CMFCApplication1Dlg::OnBnClickedButton1()
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 
 	ResultViewFn(1);
+	
 }
 
 
@@ -311,10 +312,25 @@ void CMFCApplication1Dlg::ResultViewFn(int numberData , int Mode)
 		}
 		
 	}
+	{
+
+
+		GetDlgItem(IDC_STATIC_View2)->GetWindowTextA(Temp);
+		if (Temp == "0" || ChangeCheck == true)
+		{
+			Temp.Format("%d", numberData);
+		}
+		else
+		{
+			Temp.AppendFormat("%d", numberData);
+		}
+
+	}
 	
     GetDlgItem(IDC_STATIC_View)->SetWindowTextA(Temp);
+	GetDlgItem(IDC_STATIC_View2)->SetWindowTextA(Temp);
 
-	//글자수 제한
+	/*글자수 제한
 	if (Temp.GetAllocLength() > 11)
 	{
 		return;
@@ -327,7 +343,7 @@ void CMFCApplication1Dlg::ResultViewFn(int numberData , int Mode)
 	else
 	{
 		Temp.AppendFormat("%d", numberData);
-	}
+	}*/
 }
 
 void CMFCApplication1Dlg::OnBnClickedButton11()
@@ -336,6 +352,8 @@ void CMFCApplication1Dlg::OnBnClickedButton11()
 	Sign = 1;
 	ChangeCheck = true;
 	GetDlgItem(IDC_STATIC_View)->GetWindowTextA(ViewStrData);
+	GetDlgItem(IDC_STATIC_View2)->GetWindowTextA(ViewStrData);
+
 }
 
 
@@ -345,6 +363,7 @@ void CMFCApplication1Dlg::OnBnClickedButton12()
 	Sign = 2;
 	ChangeCheck = true;
 	GetDlgItem(IDC_STATIC_View)->GetWindowTextA(ViewStrData);
+	GetDlgItem(IDC_STATIC_View2)->GetWindowTextA(ViewStrData);
 }
 
 
@@ -354,6 +373,7 @@ void CMFCApplication1Dlg::OnBnClickedButton13()
 	Sign = 3;
 	ChangeCheck = true;
 	GetDlgItem(IDC_STATIC_View)->GetWindowTextA(ViewStrData);
+	GetDlgItem(IDC_STATIC_View2)->GetWindowTextA(ViewStrData);
 }
 
 
@@ -363,6 +383,7 @@ void CMFCApplication1Dlg::OnBnClickedButton14()
 	Sign = 4;
 	ChangeCheck = true;
 	GetDlgItem(IDC_STATIC_View)->GetWindowTextA(ViewStrData);
+	GetDlgItem(IDC_STATIC_View2)->GetWindowTextA(ViewStrData);
 }
 
 
@@ -371,6 +392,7 @@ void CMFCApplication1Dlg::OnBnClickedButton15()
 	// = 결과출력
 	CString temp;
 	GetDlgItem(IDC_STATIC_View)->GetWindowTextA(temp);
+	GetDlgItem(IDC_STATIC_View2)->GetWindowTextA(temp);
 	int result = 0;
 	BeforeData = atoi(ViewStrData);
 	AfterData = atoi(temp);
@@ -394,6 +416,7 @@ void CMFCApplication1Dlg::OnBnClickedButton15()
 
 	temp.Format("%d", result);
 	GetDlgItem(IDC_STATIC_View)->SetWindowTextA(temp);
+	GetDlgItem(IDC_STATIC_View2)->SetWindowTextA(temp);
 
 
 }
@@ -406,5 +429,12 @@ void CMFCApplication1Dlg::OnBnClickedButton16()
 {
 	
 	Reset();
+
+}
+
+
+void CMFCApplication1Dlg::OnStnClickedStaticView2()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 
 }
